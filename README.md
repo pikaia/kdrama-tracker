@@ -1,7 +1,7 @@
 # kdrama-tracker
 Chrome extension for tracking kdramas views
 
-This extension is tied to https://www1.dramacool.cr/
+This extension is designed for use with https://www1.dramacool.cr/ and a custom google sheet.
 ## Idea 1
 The goal is to monitor the left content pane for new episodes of popular drama. This grid is a 9x4 table. We can check a google sheet which contains the last episode watched.
 
