@@ -1,19 +1,26 @@
 {
-    "name": "Kdrama Tracker",
-    "description": "Track watched episodes, and links to next episode.",
-    "version": "1.0",
-    "manifest_version": 3,
-    "permissions": [
-      "activeTab",
-      "scripting"
-    ],    "icons": {
-        "16": "images/kdrama_tracker_16.png",
-        "32": "images/kdrama_tracker_32.png",
-        "48": "images/kdrama_tracker_48.png",
-        "128": "images/kdrama_tracker_128.png"
-      },
-      "background": {
-        "service_worker": "background.js"
-      },
-      "action": {}  
+  "manifest_version": 3,
+  "name": "Kdrama Tracker",
+  "version": "1.0",
+  "description": "Track watched episodes, and links to next episode.",
+  "icons": {
+    "16": "images/kdrama_tracker_16.png",
+    "32": "images/kdrama_tracker_32.png",
+    "48": "images/kdrama_tracker_48.png",
+    "128": "images/kdrama_tracker_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www1.dramacool.cr/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {}
 }
